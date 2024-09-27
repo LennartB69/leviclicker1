@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Clicker Game</title>
+    <link rel="stylesheet" href="levigame1.2.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Clicker Game</h1>
+        <div id="score-display">Score: 0</div>
+        <div id="gems-display">Gems: 0</div>
+        <div id="click-power-display">Click Power: 1</div>
+        <img id="click-button" src="C:\Users\Lennart\Downloads\levimain1-removebg-preview.png" alt="Click Button">
+        <div id="upgrades-container">
+            <div class="upgrade-item">
+                <button id="upgrade-click-power">
+                    <img src="upgrade.png" alt="Upgrade Click Power">
+                    <span id="upgrade-click-power-price">Price: 10</span>
+                    <span id="upgrade-click-power-level">Level: 1</span>
+                </button>
+                <div class="tooltip">Increase your click power by 1.</div>
+            </div>
+            <div class="upgrade-item">
+                <button id="auto-clicker-1">
+                    <img src="autoclicker1.png" alt="Auto Clicker 1">
+                    <span id="auto-clicker-1-price">Price: 50</span>
+                    <span id="auto-clicker-1-level">Level: 1</span>
+                </button>
+                <div class="tooltip">Automatically clicks once every second.</div>
+            </div>
+            <div class="upgrade-item">
+                <button id="auto-clicker-2">
+                    <img src="autoclicker2.png" alt="Auto Clicker 2">
+                    <span id="auto-clicker-2-price">Price: 100</span>
+                    <span id="auto-clicker-2-level">Level: 1</span>
+                </button>
+                <div class="tooltip">Automatically clicks twice every second.</div>
+            </div>
+            <div class="upgrade-item">
+                <button id="prestige">
+                    <img src="prestige.png" alt="Prestige">
+                    <span id="prestige-info">Requires: 1000 Points</span>
+                </button>
+                <div class="tooltip">Reset your progress for a permanent multiplier boost.</div>
+            </div>
+            <div class="upgrade-item">
+                <button id="buy-theme">
+                    <img src="buytheme.png" alt="Buy Theme">
+                    <span id="buy-theme-price">Price: 50 Gems</span>
+                </button>
+                <div class="tooltip">Change the game theme with different colors.</div>
+            </div>
+        </div>
+        <div id="prestige-shop-container">
+            <h2>Prestige Shop</h2>
+            <button id="prestige-upgrade-click-power">Permanent Click Power +1 (Cost: 5 Prestige Points)</button>
+            <button id="prestige-upgrade-auto-clicker">Auto-Clicker Speed +10% (Cost: 10 Prestige Points)</button>
+        </div>
+        <div id="timed-bonus-container"></div>
+        <div id="daily-quest-container">
+            <h2>Daily Quests</h2>
+            <ul id="quest-list"></ul>
+        </div>
+        <div id="power-ups-container">
+            <button id="temporary-multiplier">2x Multiplier (10 Gems)</button>
+            <button id="extra-clicks">Extra Clicks (5 Gems)</button>
+        </div>
+        <div id="achievements-container">
+            <h2>Achievements</h2>
+            <ul id="achievement-list"></ul>
+        </div>
+        <div id="daily-reward-container">
+            <button id="claim-daily-reward">Claim Daily Reward</button>
+            <div id="daily-reward-message"></div>
+        </div>
+    </div>
+    <audio id="clickSound" src="C:\Users\Lennart\Downloads\copy_4EF4C2D3-225D-4231-9D5B-F95508FC01C6.mp3"></audio>
+    <audio id="buySound" src="buy.mp3"></audio>
+    <audio id="questCompleteSound" src="quest-complete.mp3"></audio>
+    <audio id="bonusSound" src="bonus.mp3"></audio>
+    <script src="levigame1.3.js"></script>
+</body>
+</html>
