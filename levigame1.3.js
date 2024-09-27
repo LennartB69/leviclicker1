@@ -298,3 +298,18 @@ window.onload = function() {
     setInterval(spawnTimedBonus, 30000); // Spawn a timed bonus every 30 seconds
     setInterval(checkDailyQuests, 5000); // Check quests every 5 seconds
 };
+// Prevent zoom on double-tap in mobile
+document.addEventListener('touchstart', function(event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+}, { passive: false });
+
+let lastTouchEnd = 0;
+document.addEventListener('touchend', function(event) {
+    const now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+    }
+    lastTouchEnd = now;
+}, false);
